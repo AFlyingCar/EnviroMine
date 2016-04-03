@@ -140,6 +140,8 @@ public class EM_StatusManager
 	
 	public static EnviroDataTracker lookupTracker(EntityLivingBase entity)
 	{
+		if(entity == null) return null;
+		
 		if(entity instanceof EntityPlayer)
 		{
 			if(trackerList.containsKey("" + entity.getEntityName()))
